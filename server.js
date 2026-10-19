@@ -194,7 +194,7 @@ app.get('/api/educacao/admin/students', requireDb, adminAuth, async (req, res) =
 });
 app.post('/api/educacao/admin/students', requireDb, adminAuth, async (req, res) => {
   const name = String(req.body.name || '').trim(), email = String(req.body.email || '').trim().toLowerCase(), password = String(req.body.password || '');
-  if (!name || !/^\\S+@\\S+\\.\\S+$/.test(email) || password.length < 10) return res.status(400).json({ error: 'Nome, e-mail válido e senha com pelo menos 10 caracteres são obrigatórios.' });
+  if (!name || !/^\S+@\S+\.\S+$/.test(email) || password.length < 10) return res.status(400).json({ error: 'Nome, e-mail válido e senha com pelo menos 10 caracteres são obrigatórios.' });
   try {
     const hash = await bcrypt.hash(password,12);
     const r = await pool.query(`INSERT INTO ${SCHEMA}.students(name,email,password_hash) VALUES($1,$2,$3) RETURNING id,name,email,active,created_at`,[name,email,hash]);
@@ -210,7 +210,7 @@ app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 initDb().catch(err => { console.error('Database initialization failed:', err.message); dbReady = false; });
 app.listen(PORT, () => console.log('Multiplay Educação standalone listening on', PORT));
 +values.length); }
-  if (typeof req.body.email === 'string' && /^\\S+@\\S+\\.\\S+$/.test(req.body.email.trim())) { values.push(req.body.email.trim().toLowerCase()); fields.push('email=
+  if (typeof req.body.email === 'string' && /^\S+@\S+\.\S+$/.test(req.body.email.trim())) { values.push(req.body.email.trim().toLowerCase()); fields.push('email=
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 initDb().catch(err => { console.error('Database initialization failed:', err.message); dbReady = false; });
 app.listen(PORT, () => console.log('Multiplay Educação standalone listening on', PORT));
