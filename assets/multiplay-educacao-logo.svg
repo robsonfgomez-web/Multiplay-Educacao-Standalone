@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#061a3d"/><stop offset=".55" stop-color="#0b4d9a"/><stop offset="1" stop-color="#07142d"/></linearGradient>
+ <linearGradient id="book" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset=".5" stop-color="#d9efff"/><stop offset="1" stop-color="#8ccfff"/></linearGradient>
+ <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffb21a"/><stop offset="1" stop-color="#ff6a00"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect x="18" y="18" width="864" height="864" rx="170" fill="url(#bg)" stroke="#20b9ff" stroke-width="10"/>
+<path d="M170 610V265c0-45 55-72 91-42l187 154 185-154c37-30 92-3 92 42v345l-93 72V398L448 555 263 398v284z" fill="url(#book)" stroke="#0a2f63" stroke-width="16" stroke-linejoin="round"/>
+<path d="M448 550L625 400v270L448 812 271 670V400z" fill="#0d6bd6" opacity=".38"/>
+<g transform="translate(612 100) rotate(9)" filter="url(#glow)">
+ <rect x="0" y="0" width="74" height="430" rx="30" fill="url(#orange)"/>
+ <rect x="0" y="0" width="74" height="55" rx="25" fill="#ffd15a"/>
+ <path d="M0 430h74l-37 82z" fill="#f0c9a1"/>
+ <path d="M31 490l6 22 8-22z" fill="#26364b"/>
+ <rect x="0" y="70" width="74" height="30" fill="#f7fbff" opacity=".95"/>
+</g>
+<text x="450" y="730" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="88" font-weight="900" fill="#fff" letter-spacing="2">MULTI<tspan fill="#ff8a00">PLAY</tspan></text>
+<text x="450" y="805" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="42" font-weight="800" fill="#fff" letter-spacing="9">EDUCAÇÃO</text>
+</svg>
